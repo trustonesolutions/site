@@ -1,397 +1,458 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Início - TrustOne Solutions</title>
-    <link rel="icon" type="image/png" href="assets/images/T1_favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="assets/images/T1_favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Header/Navigation -->
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="assets/images/fulllogo_transparent_nobuffer.png" alt="TrustOne Solutions" class="logo">
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="inicio.html" class="nav-link active">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="sobre.html" class="nav-link">Sobre Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contato.html" class="nav-link">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-                            <i class="fas fa-moon" id="theme-icon"></i>
-                        </button>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img
+              src="assets/images/fulllogo_transparent_nobuffer.png"
+              alt="TrustOne Solutions"
+              class="logo"
+            />
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="inicio.html" class="nav-link active">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="sobre.html" class="nav-link">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a href="contato.html" class="nav-link">Contato</a>
+            </li>
+          </ul>
+          <div class="nav-controls">
+            <label class="theme-switch">
+              <input type="checkbox" id="theme-toggle" />
+              <span class="theme-slider">
+                <i class="fas fa-sun theme-icon sun-icon"></i>
+                <i class="fas fa-moon theme-icon moon-icon"></i>
+              </span>
+            </label>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Seção Hero -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Transforme seu negócio com <span class="highlight">TrustOne Solutions</span></h1>
-                    <p class="hero-description">
-                        Oferecemos soluções tecnológicas inovadoras e serviços especializados para impulsionar o crescimento da sua empresa. 
-                        Com expertise em tecnologia e compromisso com a excelência, somos seu parceiro estratégico para o sucesso digital.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="contato.html" class="btn btn-primary">Fale Conosco</a>
-                        <a href="sobre.html" class="btn btn-secondary">Saiba Mais</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-card">
-                        <i class="fas fa-rocket hero-icon"></i>
-                        <h3>Inovação</h3>
-                        <p>Soluções tecnológicas de ponta para o futuro do seu negócio</p>
-                    </div>
-                </div>
+      <!-- Seção Hero -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Transforme seu negócio com
+              <span class="highlight">TrustOne Solutions</span>
+            </h1>
+            <p class="hero-description">
+              Somos sua parceira estratégica para impulsionar a eficiência
+              operacional e garantir o crescimento sustentável da sua empresa.
+              Oferecemos soluções personalizadas que abordam seus desafios de
+              gestão de forma eficaz e inovadora.
+            </p>
+            <div class="hero-buttons">
+              <a href="contato.html" class="btn btn-primary">Fale Conosco</a>
+              <a href="sobre.html" class="btn btn-secondary">Saiba Mais</a>
             </div>
-        </section>
+          </div>
+          <div class="hero-image">
+            <div class="hero-card">
+              <i class="fas fa-rocket hero-icon"></i>
+              <h3>Inovação</h3>
+              <p>Soluções tecnológicas de ponta para o futuro do seu negócio</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Seção de Serviços -->
-        <section class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Nossos Serviços</h2>
-                    <p class="section-subtitle">Soluções completas para transformar sua empresa</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Cloud Computing</h3>
-                        <p>Migração e gestão de infraestrutura em nuvem com alta disponibilidade e segurança. Otimize custos e melhore a performance dos seus sistemas com nossa expertise em AWS, Azure e Google Cloud.</p>
-                        <ul class="service-features">
-                            <li>Migração completa para nuvem</li>
-                            <li>Backup automático e recuperação</li>
-                            <li>Monitoramento 24/7</li>
-                            <li>Otimização de custos</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Segurança Digital</h3>
-                        <p>Proteção completa contra ameaças cibernéticas com soluções avançadas de segurança da informação e conformidade com LGPD. Mantenha seus dados seguros e sua empresa protegida.</p>
-                        <ul class="service-features">
-                            <li>Auditoria de segurança</li>
-                            <li>Implementação de firewalls</li>
-                            <li>Conformidade LGPD</li>
-                            <li>Treinamento de equipes</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Business Intelligence</h3>
-                        <p>Transforme dados em insights estratégicos com dashboards interativos e relatórios automatizados. Tome decisões inteligentes baseadas em dados confiáveis e análises preditivas.</p>
-                        <ul class="service-features">
-                            <li>Dashboards em tempo real</li>
-                            <li>Análise preditiva</li>
-                            <li>Machine Learning</li>
-                            <li>Integração de sistemas</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Desenvolvimento de Apps</h3>
-                        <p>Aplicativos móveis e web personalizados com tecnologias modernas, design responsivo e experiência do usuário otimizada. Do conceito ao lançamento, criamos apps que fazem a diferença.</p>
-                        <ul class="service-features">
-                            <li>Apps nativos iOS e Android</li>
-                            <li>Progressive Web Apps</li>
-                            <li>Design UX/UI moderno</li>
-                            <li>Integração com APIs</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Automação de Processos</h3>
-                        <p>Otimize operações com automação inteligente, reduzindo custos e aumentando a eficiência dos processos empresariais. Elimine tarefas repetitivas e foque no que realmente importa.</p>
-                        <ul class="service-features">
-                            <li>RPA (Robotic Process Automation)</li>
-                            <li>Workflows automatizados</li>
-                            <li>Integração de sistemas legados</li>
-                            <li>Análise de processos</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Suporte Técnico</h3>
-                        <p>Suporte especializado 24/7 com equipe técnica qualificada para garantir o funcionamento contínuo dos seus sistemas. Conte conosco para manter sua operação sempre ativa.</p>
-                        <ul class="service-features">
-                            <li>Suporte remoto e presencial</li>
-                            <li>SLA personalizado</li>
-                            <li>Manutenção preventiva</li>
-                            <li>Monitoramento proativo</li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- Seção de Serviços -->
+      <section class="services-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">
+              Soluções completas para transformar sua empresa
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>SAP Business One</h3>
+              <p>
+                Implantação, sustentação, revitalização, treinamentos e
+                desenvolvimento de relatórios personalizados para otimizar sua
+                gestão empresarial.
+              </p>
+              <ul class="service-features">
+                <li>Implantação completa</li>
+                <li>Sustentação e suporte</li>
+                <li>Revitalização de sistemas</li>
+                <li>Treinamentos especializados</li>
+              </ul>
+              <div class="service-image">
+                <!-- <img src="assets/images/data-analytics.jpg" alt="SAP Business One - Analytics"> -->
+              </div>
             </div>
-        </section>
 
-        <!-- Seção de Diferenciais -->
-        <section class="differentials-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Por que escolher a TrustOne?</h2>
-                    <p class="section-subtitle">Nossos diferenciais competitivos no mercado</p>
-                </div>
-                <div class="differentials-grid">
-                    <div class="differential-item">
-                        <div class="differential-number">01</div>
-                        <h3>Experiência Comprovada</h3>
-                        <p>Mais de 10 anos de experiência no mercado de tecnologia, com projetos bem-sucedidos em diversos segmentos empresariais. Nossa trajetória é marcada por inovação e resultados consistentes.</p>
-                    </div>
-                    <div class="differential-item">
-                        <div class="differential-number">02</div>
-                        <h3>Equipe Especializada</h3>
-                        <p>Profissionais certificados nas principais tecnologias do mercado, sempre atualizados com as últimas tendências. Nossa equipe multidisciplinar garante excelência em cada projeto.</p>
-                    </div>
-                    <div class="differential-item">
-                        <div class="differential-number">03</div>
-                        <h3>Metodologia Ágil</h3>
-                        <p>Utilizamos metodologias ágeis para entregas rápidas e eficientes, com acompanhamento constante do progresso. Transparência e comunicação são pilares do nosso processo.</p>
-                    </div>
-                    <div class="differential-item">
-                        <div class="differential-number">04</div>
-                        <h3>Suporte Contínuo</h3>
-                        <p>Relacionamento de longo prazo com suporte técnico especializado e atualizações constantes dos sistemas. Estamos sempre ao seu lado para garantir o sucesso do seu negócio.</p>
-                    </div>
-                </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Desenvolvimento</h3>
+              <p>
+                Criação de add-ons para SAP Business One, integrações
+                personalizadas e criação de documentação técnica completa.
+              </p>
+              <ul class="service-features">
+                <li>Add-ons personalizados</li>
+                <li>Integrações de sistemas</li>
+                <li>Documentação técnica</li>
+                <li>Soluções sob medida</li>
+              </ul>
+              <div class="service-image">
+                <!-- <img src="assets/images/tech-solutions.jpg" alt="Desenvolvimento de Soluções"> -->
+              </div>
             </div>
-        </section>
 
-        <!-- Seção de Estatísticas -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="150">0</div>
-                        <div class="stat-label">Projetos Entregues</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">% de Satisfação</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="50">0</div>
-                        <div class="stat-label">Clientes Ativos</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="24">0</div>
-                        <div class="stat-label">Suporte 24/7</div>
-                    </div>
-                </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Analytics</h3>
+              <p>
+                DataLake, criação de dashboards e KPI's personalizados,
+                implantação de IA, relatórios avançados e governança de dados.
+              </p>
+              <ul class="service-features">
+                <li>Dashboards personalizados</li>
+                <li>KPI's estratégicos</li>
+                <li>Implantação de IA</li>
+                <li>Governança de dados</li>
+              </ul>
+              <div class="service-image">
+                <!-- <img src="assets/images/data-analytics.jpg" alt="Business Analytics"> -->
+              </div>
             </div>
-        </section>
 
-        <!-- Seção de Tecnologias -->
-        <section class="technologies-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Tecnologias que Dominamos</h2>
-                    <p class="section-subtitle">Trabalhamos com as principais tecnologias do mercado</p>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <h3>Frontend</h3>
-                        <div class="tech-items">
-                            <span class="tech-item">React</span>
-                            <span class="tech-item">Angular</span>
-                            <span class="tech-item">Vue.js</span>
-                            <span class="tech-item">TypeScript</span>
-                            <span class="tech-item">Next.js</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Backend</h3>
-                        <div class="tech-items">
-                            <span class="tech-item">Node.js</span>
-                            <span class="tech-item">Python</span>
-                            <span class="tech-item">Java</span>
-                            <span class="tech-item">.NET</span>
-                            <span class="tech-item">PHP</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Cloud</h3>
-                        <div class="tech-items">
-                            <span class="tech-item">AWS</span>
-                            <span class="tech-item">Azure</span>
-                            <span class="tech-item">Google Cloud</span>
-                            <span class="tech-item">Docker</span>
-                            <span class="tech-item">Kubernetes</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Banco de Dados</h3>
-                        <div class="tech-items">
-                            <span class="tech-item">PostgreSQL</span>
-                            <span class="tech-item">MongoDB</span>
-                            <span class="tech-item">MySQL</span>
-                            <span class="tech-item">Redis</span>
-                            <span class="tech-item">Oracle</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>Gestão Empresarial</h3>
+              <p>
+                Mapeamento, redefinição ou criação de processos, análise
+                financeira, Valuation, gestão de custos e rentabilidade.
+              </p>
+              <ul class="service-features">
+                <li>Mapeamento de processos</li>
+                <li>Análise financeira</li>
+                <li>Valuation empresarial</li>
+                <li>Gestão de custos</li>
+              </ul>
+              <div class="service-image">
+                <!-- <img src="assets/images/team-meeting.jpg" alt="Gestão Empresarial"> -->
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Seção de Depoimentos -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">O que nossos clientes dizem</h2>
-                    <p class="section-subtitle">Depoimentos reais de empresas que transformaram seus negócios conosco</p>
-                </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"A TrustOne transformou completamente nossa infraestrutura de TI. A migração para a nuvem foi perfeita e nossa produtividade aumentou 40%. Equipe extremamente competente e profissional."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Maria Silva</h4>
-                                <span>CEO - TechCorp Brasil</span>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"O sistema de BI desenvolvido pela TrustOne nos deu insights valiosos sobre nosso negócio. Agora tomamos decisões baseadas em dados e nossos resultados melhoraram significativamente."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>João Santos</h4>
-                                <span>Diretor Comercial - InnovaCorp</span>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Excelente suporte técnico! Sempre que precisamos, a equipe está disponível. A automação de processos que implementaram economizou horas de trabalho manual da nossa equipe."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Ana Costa</h4>
-                                <span>Gerente de Operações - LogiSmart</span>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Seção de Resultados -->
+      <section class="results-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Nossos Resultados</h2>
+            <p class="section-subtitle">
+              Resultados comprovados em mapeamento e otimização de processos
+            </p>
+          </div>
+          <div class="results-grid">
+            <div class="result-item">
+              <div class="result-number">+50</div>
+              <h3>Projetos Concluídos</h3>
+              <p>
+                Projetos concluídos em mapeamento e otimização de processos
+                críticos
+              </p>
             </div>
-        </section>
+            <div class="result-item">
+              <div class="result-number">25%</div>
+              <h3>Redução de Tempo</h3>
+              <p>
+                De redução média no tempo de ciclos dos processos após as
+                intervenções da TrustOne
+              </p>
+            </div>
+            <div class="result-item">
+              <div class="result-number">18%</div>
+              <h3>Aumento de Produtividade</h3>
+              <p>
+                De aumento de produtividade, observando a operação
+                pós-implementação de melhorias
+              </p>
+            </div>
+            <div class="result-item">
+              <div class="result-number">100+</div>
+              <h3>Projetos Entregues</h3>
+              <p>Mais de 100 projetos entregues ao longo da nossa jornada</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Seção Call to Action -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Pronto para transformar seu negócio?</h2>
-                    <p>Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar o próximo nível com soluções tecnológicas inovadoras.</p>
-                    <div class="cta-buttons">
-                        <a href="contato.html" class="btn btn-primary">Solicitar Orçamento</a>
-                        <a href="sobre.html" class="btn btn-secondary">Conhecer a Empresa</a>
-                    </div>
+      <!-- Seção Mapeamento de Desafios -->
+      <section class="challenges-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Mapeamento de Desafios</h2>
+            <p class="section-subtitle">
+              Identificar e tratar gargalos e ineficiências operacionais que
+              impactam a produtividade das empresas é o nosso negócio
+            </p>
+          </div>
+          <div class="challenges-comparison">
+            <div class="challenge-column">
+              <h3 class="challenge-title negative">Crescimento sem Processo</h3>
+              <div class="challenge-items">
+                <div class="challenge-item negative">
+                  <i class="fas fa-times"></i>
+                  <span>Não há padronização entre filiais</span>
                 </div>
+                <div class="challenge-item negative">
+                  <i class="fas fa-times"></i>
+                  <span>Risco de perda de informação</span>
+                </div>
+                <div class="challenge-item negative">
+                  <i class="fas fa-times"></i>
+                  <span>Ineficiência sistêmica</span>
+                </div>
+                <div class="challenge-item negative">
+                  <i class="fas fa-times"></i>
+                  <span>Sistemas satélites sem integração fluida</span>
+                </div>
+              </div>
             </div>
-        </section>
+            <div class="vs-divider"><span>VS</span></div>
+            <div class="challenge-column">
+              <h3 class="challenge-title positive">Crescimento com Processo</h3>
+              <div class="challenge-items">
+                <div class="challenge-item positive">
+                  <i class="fas fa-check"></i>
+                  <span>Padronização interna e entre filiais</span>
+                </div>
+                <div class="challenge-item positive">
+                  <i class="fas fa-check"></i>
+                  <span
+                    >Curatela de informação e gestão de custos de operação</span
+                  >
+                </div>
+                <div class="challenge-item positive">
+                  <i class="fas fa-check"></i> <span>Eficiência sistêmica</span>
+                </div>
+                <div class="challenge-item positive">
+                  <i class="fas fa-check"></i>
+                  <span>Integração fluida e inteligente entre sistemas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="focus-quote">
+            <blockquote>
+              "O nosso foco é trazer clareza e simplificação aos fluxos
+              internos, tornando a mensuração e otimização de custos de
+              processos mais acessíveis."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Depoimentos -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <p class="section-subtitle">
+              Depoimentos reais de empresas que transformaram seus negócios
+              conosco
+            </p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "A TrustOne transformou completamente nossa infraestrutura de
+                  TI. A migração para a nuvem foi perfeita e nossa produtividade
+                  aumentou 40%. Equipe extremamente competente e profissional."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Maria Silva</h4>
+                  <span>CEO - TechCorp Brasil</span>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "O sistema de BI desenvolvido pela TrustOne nos deu insights
+                  valiosos sobre nosso negócio. Agora tomamos decisões baseadas
+                  em dados e nossos resultados melhoraram significativamente."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>João Santos</h4>
+                  <span>Diretor Comercial - InnovaCorp</span>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Excelente suporte técnico! Sempre que precisamos, a equipe
+                  está disponível. A automação de processos que implementaram
+                  economizou horas de trabalho manual da nossa equipe."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Ana Costa</h4>
+                  <span>Gerente de Operações - LogiSmart</span>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Call to Action -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Pronto para transformar seu negócio?</h2>
+            <p>
+              Entre em contato conosco e descubra como podemos ajudar sua
+              empresa a alcançar o próximo nível com soluções tecnológicas
+              inovadoras.
+            </p>
+            <div class="cta-buttons">
+              <a href="contato.html" class="btn btn-primary"
+                >Solicitar Orçamento</a
+              >
+              <a href="sobre.html" class="btn btn-secondary"
+                >Conhecer a Empresa</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/images/fulllogo_transparent_nobuffer.png" alt="TrustOne Solutions" class="footer-logo-img">
-                    <p>Transformando negócios através da tecnologia</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navegação</h4>
-                    <ul>
-                        <li><a href="inicio.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre Nós</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-legal">
-                    <h4>Informações Legais</h4>
-                    <ul>
-                        <li><a href="politica-privacidade.html" target="_blank">Política de Privacidade</a></li>
-                        <li><a href="politica-cookies.html" target="_blank">Política de Cookies</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <p>CNPJ: 61.787.106/0001-71</p>
-                    <p>São Paulo, SP</p>
-                    <p>contato@trustone.solutions</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TrustOne Solutions. Todos os direitos reservados.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="assets/images/fulllogo_transparent_nobuffer.png"
+              alt="TrustOne Solutions"
+              class="footer-logo-img"
+            />
+            <p>Transformando negócios através da tecnologia</p>
+          </div>
+          <div class="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="inicio.html">Início</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal">
+            <h4>Informações Legais</h4>
+            <ul>
+              <li>
+                <a href="politica-privacidade.html" target="_blank"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="politica-cookies.html" target="_blank"
+                  >Política de Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contato</h4>
+            <p>CNPJ: 61.787.106/0001-71</p>
+            <p>São Paulo, SP</p>
+            <p>contato@trustone.solutions</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 TrustOne Solutions. Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookie-banner">
-        <div class="cookie-content">
-            <p>Este site utiliza cookies para melhorar sua experiência. <a href="politica-cookies.html" target="_blank">Saiba mais</a></p>
-            <button class="cookie-accept" id="cookie-accept">Aceitar</button>
-        </div>
+      <div class="cookie-content">
+        <p>
+          Este site utiliza cookies para melhorar sua experiência.
+          <a href="politica-cookies.html" target="_blank">Saiba mais</a>
+        </p>
+        <button class="cookie-accept" id="cookie-accept">Aceitar</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-

@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme-toggle");
-    const themeIcon = document.getElementById("theme-icon");
     const cookieBanner = document.getElementById("cookie-banner");
     const cookieAccept = document.getElementById("cookie-accept");
     const hamburger = document.querySelector(".hamburger");
@@ -11,32 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentTheme = localStorage.getItem("theme");
         if (currentTheme) {
             document.documentElement.setAttribute("data-theme", currentTheme);
-            if (currentTheme === "dark") {
-                themeIcon.classList.remove("fa-moon");
-                themeIcon.classList.add("fa-sun");
-            } else {
-                themeIcon.classList.remove("fa-sun");
-                themeIcon.classList.add("fa-moon");
-            }
+            themeToggle.checked = currentTheme === "dark";
         } else {
             // Default to light theme if no preference is set
             document.documentElement.setAttribute("data-theme", "light");
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
+            themeToggle.checked = false;
         }
 
-        themeToggle.addEventListener("click", () => {
-            let theme = document.documentElement.getAttribute("data-theme");
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "light");
-                localStorage.setItem("theme", "light");
-                themeIcon.classList.remove("fa-sun");
-                themeIcon.classList.add("fa-moon");
-            } else {
+        themeToggle.addEventListener("change", () => {
+            if (themeToggle.checked) {
                 document.documentElement.setAttribute("data-theme", "dark");
                 localStorage.setItem("theme", "dark");
-                themeIcon.classList.remove("fa-moon");
-                themeIcon.classList.add("fa-sun");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("theme", "light");
             }
         });
     }
