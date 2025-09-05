@@ -163,7 +163,7 @@ ul {
   max-width: 100%;
   margin: 0 auto;
   padding-left: 10%;
-  padding-right: 27%;
+  padding-right: 20%;
 }
 
 /* Logos: ficam sempre colados à esquerda */
@@ -238,13 +238,13 @@ ul {
 }
 /* Theme Switch */
 .theme-switch {
-  position: fixed;    /* fixa na tela, não dentro do header */
-  top: 40%;          /* distância do topo */
-  right: 10px;        /* distância da lateral direita */
+  position: fixed; /* fixa na tela, não dentro do header */
+  top: 40%; /* distância do topo */
+  right: 10px; /* distância da lateral direita */
   display: inline-block;
   width: 60px;
   height: 30px;
-  z-index: 2000;      /* garante que fique acima de outros elementos */
+  z-index: 2000; /* garante que fique acima de outros elementos */
 }
 
 .theme-switch input {
@@ -330,9 +330,6 @@ input:checked + .theme-slider:before {
   width: 25px;
   background-color: var(--text-primary);
   border-radius: 5px;
-}
-
-
 }
 
 /* Main Content Sections */
@@ -1908,9 +1905,9 @@ section:nth-of-type(even) {
   }
 
   .challenge-column {
-    min-width: unset;   /* remove trava de 300px */
-    width: 100%;        /* ocupa toda a largura */
-    padding: 20px;      /* padding menor pro mobile */
+    min-width: unset; /* remove trava de 300px */
+    width: 100%; /* ocupa toda a largura */
+    padding: 20px; /* padding menor pro mobile */
     box-sizing: border-box;
   }
 }
@@ -1936,5 +1933,59 @@ section:nth-of-type(even) {
     display: block; /* mostra switch dentro do menu */
     margin-top: 2rem; /* dá um respiro */
     text-align: center; /* centraliza */
+  }
+}
+
+/* ===== Ajustes Globais para Cards no Mobile ===== */
+@media (max-width: 480px) {
+  .service-card,
+  .differential-item,
+  .tech-category,
+  .testimonial-card,
+  .department-card,
+  .cert-item,
+  .faq-item,
+  .team-member,
+  .challenge-column,
+  .mvv-card,
+  .journey-item,
+  .founder-card,
+  .browser-link {
+    min-width: unset;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* evita cortes */
+  }
+  .services-grid,
+  .differentials-grid,
+  .tech-grid,
+  .testimonials-grid,
+  .departments-grid,
+  .certifications-grid,
+  .team-grid,
+  .mvv-grid,
+  .journey-grid,
+  .founders-grid,
+  .browser-links,
+  .challenges-comparison {
+    padding: 0 10px; /* respiro nas bordas */
+    gap: 20px;
+  }
+}
+/* Switch no menu (mobile) */
+.nav-menu .theme-switch {
+  display: none; /* escondido por padrão */
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    display: none; /* esconde switch fixo do desktop */
+  }
+
+  .nav-menu .theme-switch {
+    display: block; /* mostra dentro do menu */
+    margin: 2rem auto 0; /* centraliza e dá espaço */
+    text-align: center;
   }
 }
