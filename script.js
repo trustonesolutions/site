@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme-toggle");
     const cookieBanner = document.getElementById("cookie-banner");
@@ -112,5 +113,3 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(statsSection);
     }
 });
-
-

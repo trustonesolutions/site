@@ -17,16 +17,26 @@
   </head>
   <body>
     <!-- Header/Navigation -->
+    <!-- Header/Navigation -->
+    <!-- Header/Navigation -->
     <header class="header">
       <nav class="navbar">
         <div class="nav-container">
+          <!-- Esquerda: dois logos lado a lado -->
           <div class="nav-logo">
             <img
-              src="assets/images/fulllogo_transparent_nobuffer.png"
+              src="assets/images/T1_favicon.png"
               alt="TrustOne Solutions"
               class="logo"
             />
+            <img
+              src="assets/images/textonly_nobuffer.png"
+              alt="TrustOne Solutions"
+              class="logo-text"
+            />
           </div>
+
+          <!-- Centro: menu -->
           <ul class="nav-menu">
             <li class="nav-item">
               <a href="inicio.html" class="nav-link active">Início</a>
@@ -38,6 +48,8 @@
               <a href="contato.html" class="nav-link">Contato</a>
             </li>
           </ul>
+
+          <!-- Direita: switch -->
           <div class="nav-controls">
             <label class="theme-switch">
               <input type="checkbox" id="theme-toggle" />
@@ -47,6 +59,8 @@
               </span>
             </label>
           </div>
+
+          <!-- Hamburger (mobile) -->
           <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -78,11 +92,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <div class="hero-card">
-              <i class="fas fa-rocket hero-icon"></i>
-              <h3>Inovação</h3>
-              <p>Soluções tecnológicas de ponta para o futuro do seu negócio</p>
-            </div>
+            <p>Soluções tecnológicas de ponta para o futuro do seu negócio</p>
           </div>
         </div>
       </section>
@@ -234,52 +244,65 @@
               impactam a produtividade das empresas é o nosso negócio
             </p>
           </div>
-          <div class="challenges-comparison">
-            <div class="challenge-column">
-              <h3 class="challenge-title negative">Crescimento sem Processo</h3>
-              <div class="challenge-items">
-                <div class="challenge-item negative">
-                  <i class="fas fa-times"></i>
-                  <span>Não há padronização entre filiais</span>
+          <section class="desafios">
+            <div class="container">
+              <div class="challenges-comparison">
+                <div class="challenge-column">
+                  <h3 class="challenge-title negative">
+                    Crescimento sem Processo
+                  </h3>
+                  <div class="challenge-items">
+                    <div class="challenge-item negative">
+                      <i class="fas fa-times"></i>
+                      <span>Não há padronização entre filiais</span>
+                    </div>
+                    <div class="challenge-item negative">
+                      <i class="fas fa-times"></i>
+                      <span>Risco de perda de informação</span>
+                    </div>
+                    <div class="challenge-item negative">
+                      <i class="fas fa-times"></i>
+                      <span>Ineficiência sistêmica</span>
+                    </div>
+                    <div class="challenge-item negative">
+                      <i class="fas fa-times"></i>
+                      <span>Sistemas satélites sem integração fluida</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="challenge-item negative">
-                  <i class="fas fa-times"></i>
-                  <span>Risco de perda de informação</span>
-                </div>
-                <div class="challenge-item negative">
-                  <i class="fas fa-times"></i>
-                  <span>Ineficiência sistêmica</span>
-                </div>
-                <div class="challenge-item negative">
-                  <i class="fas fa-times"></i>
-                  <span>Sistemas satélites sem integração fluida</span>
+
+                <div class="challenge-column">
+                  <h3 class="challenge-title positive">
+                    Crescimento com Processo
+                  </h3>
+                  <div class="challenge-items">
+                    <div class="challenge-item positive">
+                      <i class="fas fa-check"></i>
+                      <span>Padronização interna e entre filiais</span>
+                    </div>
+                    <div class="challenge-item positive">
+                      <i class="fas fa-check"></i>
+                      <span
+                        >Curatela de informação e gestão de custos de
+                        operação</span
+                      >
+                    </div>
+                    <div class="challenge-item positive">
+                      <i class="fas fa-check"></i>
+                      <span>Eficiência sistêmica</span>
+                    </div>
+                    <div class="challenge-item positive">
+                      <i class="fas fa-check"></i>
+                      <span
+                        >Integração fluida e inteligente entre sistemas</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="vs-divider"><span>VS</span></div>
-            <div class="challenge-column">
-              <h3 class="challenge-title positive">Crescimento com Processo</h3>
-              <div class="challenge-items">
-                <div class="challenge-item positive">
-                  <i class="fas fa-check"></i>
-                  <span>Padronização interna e entre filiais</span>
-                </div>
-                <div class="challenge-item positive">
-                  <i class="fas fa-check"></i>
-                  <span
-                    >Curatela de informação e gestão de custos de operação</span
-                  >
-                </div>
-                <div class="challenge-item positive">
-                  <i class="fas fa-check"></i> <span>Eficiência sistêmica</span>
-                </div>
-                <div class="challenge-item positive">
-                  <i class="fas fa-check"></i>
-                  <span>Integração fluida e inteligente entre sistemas</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
+
           <div class="focus-quote">
             <blockquote>
               "O nosso foco é trazer clareza e simplificação aos fluxos
@@ -314,13 +337,6 @@
                   <h4>Maria Silva</h4>
                   <span>CEO - TechCorp Brasil</span>
                 </div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
               </div>
             </div>
             <div class="testimonial-card">
@@ -336,13 +352,6 @@
                   <h4>João Santos</h4>
                   <span>Diretor Comercial - InnovaCorp</span>
                 </div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
               </div>
             </div>
             <div class="testimonial-card">
@@ -357,13 +366,6 @@
                 <div class="author-info">
                   <h4>Ana Costa</h4>
                   <span>Gerente de Operações - LogiSmart</span>
-                </div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
                 </div>
               </div>
             </div>

@@ -38,13 +38,15 @@
               <a href="contato.html" class="nav-link">Contato</a>
             </li>
             <li class="nav-item">
-              <button
-                class="theme-toggle"
-                id="theme-toggle"
-                aria-label="Alternar tema"
-              >
-                <i class="fas fa-moon" id="theme-icon"></i>
-              </button>
+              <div class="nav-controls">
+                <label class="theme-switch">
+                  <input type="checkbox" id="theme-toggle" />
+                  <span class="theme-slider">
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                  </span>
+                </label>
+              </div>
             </li>
           </ul>
           <div class="hamburger">
