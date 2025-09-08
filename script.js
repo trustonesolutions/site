@@ -1,30 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.getElementById("theme-toggle");
+  const themeToggleMobile = document.getElementById("theme-toggle-mobile");
   const cookieBanner = document.getElementById("cookie-banner");
   const cookieAccept = document.getElementById("cookie-accept");
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
 
-  // Theme Toggle
-  if (themeToggle) {
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme) {
-      document.documentElement.setAttribute("data-theme", currentTheme);
-      themeToggle.checked = currentTheme === "dark";
-    } else {
-      // Default to light theme if no preference is set
-      document.documentElement.setAttribute("data-theme", "light");
-      themeToggle.checked = false;
+  // Theme Toggle - Função para aplicar o tema
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    
+    // Sincronizar ambos os switches
+    if (themeToggle) {
+      themeToggle.checked = theme === "dark";
     }
+    if (themeToggleMobile) {
+      themeToggleMobile.checked = theme === "dark";
+    }
+  }
 
+  // Carregar tema salvo ou usar padrão
+  const currentTheme = localStorage.getItem("theme") || "light";
+  applyTheme(currentTheme);
+
+  // Event listener para o switch desktop
+  if (themeToggle) {
     themeToggle.addEventListener("change", () => {
-      if (themeToggle.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-      }
+      const newTheme = themeToggle.checked ? "dark" : "light";
+      applyTheme(newTheme);
+    });
+  }
+
+  // Event listener para o switch mobile
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener("change", () => {
+      const newTheme = themeToggleMobile.checked ? "dark" : "light";
+      applyTheme(newTheme);
     });
   }
 
@@ -114,3 +126,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(statsSection);
   }
 });
+
