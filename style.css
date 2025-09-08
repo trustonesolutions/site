@@ -433,7 +433,6 @@ section:nth-of-type(even) {
 .hero-image p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
-  
 }
 
 /* Services Section */
@@ -556,7 +555,6 @@ section:nth-of-type(even) {
     opacity: 1;
   }
 }
-
 
 /* Animação de entrada */
 @keyframes countUp {
@@ -998,6 +996,69 @@ section:nth-of-type(even) {
 .cert-item p {
   color: var(--text-secondary);
 }
+/* Results Section */
+.results-section {
+  background-color: var(--bg-secondary);
+  padding: 80px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.result-card {
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px var(--shadow-dark);
+}
+
+.result-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-card ul li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Específicos */
+.result-card.advantages h4 {
+  color: #28a745; /* verde */
+}
+
+.result-card.advantages ul li i {
+  color: #28a745;
+}
+
+.result-card.disadvantages h4 {
+  color: #dc3545; /* vermelho */
+}
+
+.result-card.disadvantages ul li i {
+  color: #dc3545;
+}
 
 /* Contact Page Specific Styles */
 .page-contato .hero-section {
@@ -1422,10 +1483,19 @@ section:nth-of-type(even) {
   min-width: 200px;
 }
 
-.footer-logo .footer-logo-img {
-  height: 50px;
-  margin-bottom: 15px;
+.footer-logo {
+  flex: 1; /* mantém como coluna flexível */
+  text-align: center;
 }
+
+.footer-logo .footer-logo-img {
+  height: 80px;
+  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
+  display: block;
+
+}
+
 
 .footer-logo p {
   color: var(--footer-link);
@@ -2039,13 +2109,16 @@ section:nth-of-type(even) {
   .mvv-card,
   .journey-item,
   .founder-card,
-  .browser-link {
+  .browser-link,
+  .result-card {
+    /* ✅ adicionado */
     min-width: unset;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box; /* evita cortes */
   }
+
   .services-grid,
   .differentials-grid,
   .tech-grid,
@@ -2076,5 +2149,22 @@ section:nth-of-type(even) {
     display: block; /* mostra dentro do menu */
     margin: 2rem auto 0; /* centraliza e dá espaço */
     text-align: center;
+  }
+}
+/* Tablet e Mobile */
+@media (max-width: 1024px) {
+  .footer-logo {
+    text-align: center; /* centraliza a coluna */
+  }
+
+  .footer-logo .footer-logo-img {
+    margin: 0 auto;     /* centraliza a imagem */
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo .footer-logo-img {
+    height: 60px;
   }
 }
