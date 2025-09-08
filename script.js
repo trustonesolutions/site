@@ -6,62 +6,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
 
-  // Theme Toggle - Função para aplicar o tema
+  // ===== THEME TOGGLE (Desktop + Mobile sincronizado) =====
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-    
-    // Sincronizar ambos os switches
-    if (themeToggle) {
-      themeToggle.checked = theme === "dark";
-    }
-    if (themeToggleMobile) {
-      themeToggleMobile.checked = theme === "dark";
-    }
+    if (themeToggle) themeToggle.checked = theme === "dark";
+    if (themeToggleMobile) themeToggleMobile.checked = theme === "dark";
   }
 
-  // Carregar tema salvo ou usar padrão
+  // Carregar tema salvo ou padrão
   const currentTheme = localStorage.getItem("theme") || "light";
   applyTheme(currentTheme);
 
-  // Event listener para o switch desktop
   if (themeToggle) {
     themeToggle.addEventListener("change", () => {
-      const newTheme = themeToggle.checked ? "dark" : "light";
-      applyTheme(newTheme);
+      applyTheme(themeToggle.checked ? "dark" : "light");
     });
   }
-
-  // Event listener para o switch mobile
   if (themeToggleMobile) {
     themeToggleMobile.addEventListener("change", () => {
-      const newTheme = themeToggleMobile.checked ? "dark" : "light";
-      applyTheme(newTheme);
+      applyTheme(themeToggleMobile.checked ? "dark" : "light");
     });
   }
 
-  // Cookie Banner
+  // ===== COOKIE BANNER =====
   if (cookieBanner && cookieAccept) {
     const hasAcceptedCookies = localStorage.getItem("cookieConsent");
     if (!hasAcceptedCookies) {
-      setTimeout(() => {
-        cookieBanner.classList.add("show");
-      }, 1000);
+      setTimeout(() => cookieBanner.classList.add("show"), 1000);
     }
-
     cookieAccept.addEventListener("click", () => {
       localStorage.setItem("cookieConsent", "true");
       cookieBanner.classList.remove("show");
     });
   }
 
-  // Hamburger Menu
+  // ===== HAMBURGER MENU =====
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("active");
       hamburger.classList.toggle("active");
     });
-
     document.querySelectorAll(".nav-link").forEach((n) =>
       n.addEventListener("click", () => {
         navMenu.classList.remove("active");
@@ -70,60 +55,52 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  // Smooth Scroll for internal links (if any)
+  // ===== SMOOTH SCROLL =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (!target) return;
       e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
+      target.scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  // FAQ Accordion
-  const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
-    question.addEventListener("click", () => {
-      item.classList.toggle("active");
-    });
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll(".faq-item .faq-question").forEach((q) => {
+    q.addEventListener("click", () => q.parentElement.classList.toggle("active"));
   });
 
-  // Stats Counter Animation
-  const statsSection = document.querySelector(".stats-section");
-  if (statsSection) {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of the section is visible
-    };
+  // ===== RESULTS COUNTER ANIMATION (Desktop + Mobile) =====
+  const resultsSection = document.querySelector(".results-section");
+  if (resultsSection) {
+    const observerOptions = { root: null, rootMargin: "0px", threshold: 0.2 }; // 20% visível
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          document.querySelectorAll(".stat-number").forEach((counter) => {
-            const target = +counter.getAttribute("data-count");
+          document.querySelectorAll(".result-number").forEach((counter) => {
+            const target = +counter.getAttribute("data-target");
             let current = 0;
-            const increment = target / 200; // Adjust for speed
+            const increment = target / 200;
 
             const updateCounter = () => {
               if (current < target) {
                 current += increment;
-                counter.innerText = Math.ceil(current);
-                setTimeout(updateCounter, 1);
+                counter.innerText =
+                  Math.ceil(current) + (counter.dataset.suffix || "");
+                setTimeout(updateCounter, 15);
               } else {
-                counter.innerText = target;
+                counter.innerText = target + (counter.dataset.suffix || "");
               }
             };
+
             updateCounter();
           });
-          observer.unobserve(entry.target); // Stop observing once animated
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    observer.observe(statsSection);
+    observer.observe(resultsSection);
   }
 });
-

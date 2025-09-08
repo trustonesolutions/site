@@ -1,9 +1,9 @@
 /* Variáveis CSS para temas */
 :root {
-  --bg-primary: #f8f9fa;
-  --bg-secondary: #e9ecef;
-  --text-primary: #212529;
-  --text-secondary: #495057;
+   --bg-primary: #eae4f5;   /* fundo principal mais escuro que #f6f2fa */
+  --bg-secondary: #e0d6f0; /* cards / seções, lilás médio */
+  --text-primary: #1a1a1a; /* texto bem escuro p/ contraste */
+  --text-secondary: #3d3d3d;
   --accent-color: #007bff;
   --accent-dark: #0056b3;
   --gradient-primary: linear-gradient(45deg, #007bff, #00d4ff);
@@ -11,7 +11,7 @@
   --border-color: #dee2e6;
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-dark: rgba(0, 0, 0, 0.3);
-  --header-bg: rgba(255, 255, 255, 0.95);
+  --header-bg: rgba(255, 255, 255, 0.3);
   --footer-bg: #343a40;
   --footer-text: #f8f9fa;
   --footer-link: #adb5bd;
@@ -34,7 +34,7 @@
   --border-color: #495057;
   --shadow-light: rgba(0, 0, 0, 0.5);
   --shadow-dark: rgba(0, 0, 0, 0.7);
-  --header-bg: rgba(33, 37, 41, 0.95);
+  --header-bg: rgba(0, 0, 0, 0.3);
   --footer-bg: #212529;
   --footer-text: #ced4da;
   --footer-link: #adb5bd;
@@ -153,6 +153,10 @@ ul {
 }
 
 .navbar {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* borda sutil */
   padding: 15px 0;
 }
 
@@ -360,7 +364,9 @@ section:nth-of-type(even) {
   justify-content: center;
   min-height: 70vh;
   position: relative;
+ 
 }
+
 
 .hero-section::before {
   content: "";
@@ -2176,4 +2182,25 @@ section:nth-of-type(even) {
   .footer-logo .footer-logo-img {
     height: 60px;
   }
+}
+/* Breakpoint para telas menores */
+/* Ajuste footer desktop */
+@media (min-width: 1025px) {
+  .footer-links {
+    margin-left: 60px; /* afasta Navegação do logo */
+  }
+}
+/* ==================== */
+/* Ajuste Navbar Tema Light */
+/* ==================== */
+[data-theme="light"] .navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 0.7) 0%,   /* azul */
+    rgba(102, 16, 242, 0.7) 50%, /* roxo */
+    rgba(230, 222, 244, 0.7) 100% /* lilás */
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
