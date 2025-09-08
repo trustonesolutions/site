@@ -756,10 +756,17 @@ section:nth-of-type(even) {
   opacity: 0.9;
 }
 
-.cta-buttons .btn {
-  margin: 0 15px;
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;         /* espaçamento vertical */
+  align-items: center;
 }
 
+.cta-buttons .btn {
+  width: 100%;
+  max-width: 250px;
+}
 /* About Page Specific Styles */
 .page-sobre .hero-section {
   background-image: url("assets/images/team-meeting.jpg"); /* Imagem específica para Sobre Nós */
@@ -1628,9 +1635,11 @@ section:nth-of-type(even) {
   }
 
   .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
+  display: flex;
+  flex-direction: column; /* garante empilhamento no mobile */
+  gap: 15px;              /* espaçamento entre os botões */
+  align-items: center;    /* centraliza horizontalmente */
+}
 
   .hero-buttons .btn {
     width: 80%;

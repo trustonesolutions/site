@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.documentElement.setAttribute("data-theme", currentTheme);
       themeToggle.checked = currentTheme === "dark";
     } else {
+      // Default to light theme if no preference is set
       document.documentElement.setAttribute("data-theme", "light");
       themeToggle.checked = false;
     }
@@ -57,10 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  // Smooth Scroll
+  // Smooth Scroll for internal links (if any)
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
+
       document.querySelector(this.getAttribute("href")).scrollIntoView({
         behavior: "smooth",
       });
@@ -79,7 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Stats Counter Animation
   const statsSection = document.querySelector(".stats-section");
   if (statsSection) {
-    const observerOptions = { root: null, rootMargin: "0px", threshold: 0.5 };
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    };
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelectorAll(".stat-number").forEach((counter) => {
             const target = +counter.getAttribute("data-count");
             let current = 0;
-            const increment = target / 200;
+            const increment = target / 200; // Adjust for speed
 
             const updateCounter = () => {
               if (current < target) {
@@ -100,46 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             updateCounter();
           });
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // Stop observing once animated
         }
       });
     }, observerOptions);
 
     observer.observe(statsSection);
-  }
-
-  // ✅ Results Counter Animation (novo)
-  const resultsSection = document.querySelector(".results-section");
-  if (resultsSection) {
-    const observerOptions = { root: null, rootMargin: "0px", threshold: 0.5 };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll(".result-number").forEach((counter) => {
-            const target = +counter.getAttribute("data-target");
-            let current = 0;
-            const increment = target / 200;
-
-            const updateCounter = () => {
-              if (current < target) {
-                current += increment;
-                counter.innerText =
-                  Math.ceil(current) + (counter.dataset.suffix || "");
-                setTimeout(updateCounter, 15);
-              } else {
-                counter.innerText =
-                  target + (counter.dataset.suffix || "");
-              }
-            };
-
-            updateCounter();
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    observer.observe(resultsSection);
   }
 });
