@@ -397,9 +397,10 @@ section:nth-of-type(even) {
 
 .hero-description {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto; /* centraliza horizontalmente e mantém margem inferior */
   max-width: 700px;
   opacity: 0.9;
+  text-align: center; /* centraliza o texto */
 }
 
 .hero-buttons .btn {
@@ -432,6 +433,7 @@ section:nth-of-type(even) {
 .hero-image p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
+  
 }
 
 /* Services Section */
