@@ -243,7 +243,7 @@ ul {
 /* Theme Switch */
 .theme-switch {
   position: fixed; /* fixa na tela, não dentro do header */
-  top: 40%; /* distância do topo */
+  top: 33px; /* distância do topo */
   right: 10px; /* distância da lateral direita */
   display: inline-block;
   width: 60px;
@@ -1922,7 +1922,6 @@ section:nth-of-type(even) {
   opacity: 0.85;
 }
 
-
 /* Responsividade para fundadores */
 @media (max-width: 768px) {
   .founders-grid {
@@ -2085,7 +2084,17 @@ section:nth-of-type(even) {
     padding-left: 5%;
     padding-right: 5%;
   }
+  /* Fundo do menu mobile */
+  .nav-menu {
+    background-color: rgba(0, 0, 0, 0.95); /* quase sólido no dark */
+    backdrop-filter: blur(4px); /* opcional: leve blur para destacar */
+  }
 
+  /* Light mode */
+  [data-theme="light"] .nav-menu {
+    background-color: rgba(255, 255, 255, 0.95); /* quase sólido no claro */
+    backdrop-filter: blur(4px);
+  }
   .nav-logo .logo {
     height: 50px;
     width: 50px;
@@ -2204,16 +2213,14 @@ section:nth-of-type(even) {
 }
 
 @media (max-width: 768px) {
-  .nav-controls {
-    display: none; /* esconde switch fixo do desktop */
-  }
-
   .nav-menu .theme-switch {
-    display: block; /* mostra dentro do menu */
-    margin: 2rem auto 0; /* centraliza e dá espaço */
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -2%; /* sobe mais perto do "Início" */
+    margin-bottom: 15px; /* dá respiro antes do "Sobre Nós" */
   }
 }
+
 /* Tablet e Mobile */
 @media (max-width: 1024px) {
   .footer-logo {
