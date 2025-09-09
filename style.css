@@ -1,6 +1,6 @@
 /* Variáveis CSS para temas */
 :root {
-   --bg-primary: #eae4f5;   /* fundo principal mais escuro que #f6f2fa */
+  --bg-primary: #eae4f5; /* fundo principal mais escuro que #f6f2fa */
   --bg-secondary: #e0d6f0; /* cards / seções, lilás médio */
   --text-primary: #1a1a1a; /* texto bem escuro p/ contraste */
   --text-secondary: #3d3d3d;
@@ -355,6 +355,33 @@ section:nth-of-type(even) {
 .hero-section {
   background-image: url("assets/images/freepik1.jpg");
   background-size: cover;
+  background-position: 60% 40%;
+  color: #fff;
+  text-align: center;
+  padding: 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  position: relative;
+}
+.page-sobre.hero-section {
+  background-image: url("assets/images/team-meeting.jpg");
+  background-size: cover;
+
+  background-position: 70% 30%; /* 30% = mostra mais o topo da imagem */
+  color: #fff;
+  text-align: center;
+  padding: 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  position: relative;
+}
+.page-contato.hero-section {
+  background-image: url("assets/images/data-analytics.jpg");
+  background-size: cover;
   background-position: center;
   color: #fff;
   text-align: center;
@@ -364,9 +391,7 @@ section:nth-of-type(even) {
   justify-content: center;
   min-height: 70vh;
   position: relative;
- 
 }
-
 
 .hero-section::before {
   content: "";
@@ -765,7 +790,7 @@ section:nth-of-type(even) {
 .cta-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px;         /* espaçamento vertical */
+  gap: 15px; /* espaçamento vertical */
   align-items: center;
 }
 
@@ -1506,9 +1531,7 @@ section:nth-of-type(even) {
   margin-bottom: 15px;
   margin: 0 auto 15px auto;
   display: block;
-
 }
-
 
 .footer-logo p {
   color: var(--footer-link);
@@ -1641,11 +1664,11 @@ section:nth-of-type(even) {
   }
 
   .hero-buttons {
-  display: flex;
-  flex-direction: column; /* garante empilhamento no mobile */
-  gap: 15px;              /* espaçamento entre os botões */
-  align-items: center;    /* centraliza horizontalmente */
-}
+    display: flex;
+    flex-direction: column; /* garante empilhamento no mobile */
+    gap: 15px; /* espaçamento entre os botões */
+    align-items: center; /* centraliza horizontalmente */
+  }
 
   .hero-buttons .btn {
     width: 80%;
@@ -1857,23 +1880,48 @@ section:nth-of-type(even) {
   line-height: 1.6;
 }
 
-/* Seção Missão */
+/* ===== Nossa Missão ===== */
+/* ===== Nossa Missão (Card Único) ===== */
 .mission-section {
-  padding: 80px 0;
-  background: var(--bg-primary);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.mission-content {
-  max-width: 800px;
-  margin: 0 auto;
+.mission-card {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-dark);
+  padding: 50px;
+  max-width: 900px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mission-text p {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow-dark);
 }
+
+.mission-card .section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.mission-card .section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.mission-card .mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
 
 /* Responsividade para fundadores */
 @media (max-width: 768px) {
@@ -2173,7 +2221,7 @@ section:nth-of-type(even) {
   }
 
   .footer-logo .footer-logo-img {
-    margin: 0 auto;     /* centraliza a imagem */
+    margin: 0 auto; /* centraliza a imagem */
     height: 70px;
   }
 }
@@ -2196,9 +2244,9 @@ section:nth-of-type(even) {
 [data-theme="light"] .navbar {
   background: linear-gradient(
     90deg,
-    rgba(0, 123, 255, 0.7) 0%,   /* azul */
-    rgba(102, 16, 242, 0.7) 50%, /* roxo */
-    rgba(230, 222, 244, 0.7) 100% /* lilás */
+    rgba(0, 123, 255, 0.7) 0%,
+    /* azul */ rgba(102, 16, 242, 0.7) 50%,
+    /* roxo */ rgba(230, 222, 244, 0.7) 100% /* lilás */
   );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
