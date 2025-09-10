@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cookieAccept = document.getElementById("cookie-accept");
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
+  const container = document.querySelector(".testimonials-grid"); // pode ser null
 
   // ===== THEME TOGGLE (Desktop + Mobile sincronizado) =====
   function applyTheme(theme) {
@@ -67,8 +68,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ===== FAQ ACCORDION =====
   document.querySelectorAll(".faq-item .faq-question").forEach((q) => {
-    q.addEventListener("click", () => q.parentElement.classList.toggle("active"));
+    q.addEventListener("click", () =>
+      q.parentElement.classList.toggle("active")
+    );
   });
+
+  // ===== TESTIMONIALS: shuffle (só se existir container) =====
+  if (container) {
+    const cards = Array.from(container.querySelectorAll(".testimonial-card"));
+    if (cards.length > 1) {
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      container.innerHTML = "";
+      cards.forEach((card) => container.appendChild(card));
+    }
+  }
+
+  // ===== TESTIMONIALS: scroll com roda do mouse =====
+  const testimonialsGrid = document.querySelector(".testimonials-grid");
+  if (testimonialsGrid) {
+    testimonialsGrid.addEventListener(
+      "wheel",
+      (evt) => {
+        if (evt.deltaY !== 0) {
+          evt.preventDefault();
+          testimonialsGrid.scrollBy({
+            left: evt.deltaY < 0 ? -100 : 100, // move 100px por "tic"
+            behavior: "smooth",
+          });
+        }
+      },
+      { passive: false }
+    );
+  }
 
   // ===== RESULTS COUNTER ANIMATION (Desktop + Mobile) =====
   const resultsSection = document.querySelector(".results-section");
