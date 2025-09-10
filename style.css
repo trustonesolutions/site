@@ -382,10 +382,10 @@ section:nth-of-type(even) {
   content: "";
   position: absolute;
   inset: 0;
-  background: inherit;          /* copia o background da section */
-  filter: blur(2px);            /* aplica o blur */
-  transform: scale(1.1);        /* evita bordas marcadas */
-  z-index: 0;                   /* fica no fundo */
+  background: inherit; /* copia o background da section */
+  filter: blur(3px); /* aplica o blur */
+  transform: scale(1.1); /* evita bordas marcadas */
+  z-index: 0; /* fica no fundo */
 }
 
 .hero-section::after {
@@ -393,7 +393,7 @@ section:nth-of-type(even) {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6); /* overlay escuro */
-  z-index: 1;                           /* acima do blur, mas atrás do conteúdo */
+  z-index: 1; /* acima do blur, mas atrás do conteúdo */
 }
 
 .hero-content {
@@ -401,15 +401,13 @@ section:nth-of-type(even) {
   z-index: 2; /* conteúdo sempre acima */
 }
 
-
 .hero-text {
   text-align: center;
-  
 }
 
 .hero-title {
   font-size: 4.5rem;
-  margin-bottom: 70px; /* espaço logo abaixo do título */
+  margin-bottom: 40px; /* espaço logo abaixo do título */
   line-height: 1.2;
   margin-top: -70px; /* sobe o título sem exagero */
 }
@@ -420,7 +418,7 @@ section:nth-of-type(even) {
   max-width: 700px;
   opacity: 0.9;
   text-align: center; /* centraliza o texto */
-  margin-top: 270px;
+  margin-top: 100px;
   color: #fff;
   font-weight: bolder;
 }
@@ -1785,8 +1783,8 @@ section:nth-of-type(even) {
 
 /* ===== Seção Mapeamento de Desafios ===== */
 .challenges-section {
-  background-color:; #2c2f36 /* Fundo escuro */
-  color: var(se); /* Texto claro */
+  background-color: var(--bg-section); /* fundo */
+  color: var(--text-primary); /* texto claro */
   padding: 80px 20px;
   font-family: "Arial", sans-serif;
 }
@@ -1892,8 +1890,10 @@ section:nth-of-type(even) {
 
 /* Focus Quote */
 .focus-quote {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
+  padding: 50px;
 }
 
 .focus-quote blockquote {
