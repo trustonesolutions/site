@@ -1360,15 +1360,17 @@ section:nth-of-type(even) {
 
 .location-details .location-item {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  flex-direction: column; /* força empilhar ícone em cima */
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .location-details .location-item i {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--accent-color);
-  margin-top: 5px;
+  margin: 0; /* remove deslocamento */
 }
 
 .location-details .location-item strong {
@@ -1379,7 +1381,15 @@ section:nth-of-type(even) {
   margin: 0;
   color: var(--text-secondary);
 }
+.location-content {
+  display: flex;
+  justify-content: center; /* joga tudo pro centro */
+  text-align: center;      /* centraliza textos internos */
+}
 
+.location-info {
+  max-width: 700px;        /* evita que o texto fique muito largo */
+}
 .location-map {
   flex: 2;
   min-width: 400px;
