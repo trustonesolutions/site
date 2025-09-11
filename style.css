@@ -2141,8 +2141,8 @@ section:nth-of-type(even) {
 /* ===== Mobile (até 768px) ===== */
 @media (max-width: 768px) {
   .nav-container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .nav-menu {
@@ -2298,5 +2298,17 @@ section:nth-of-type(even) {
 
   .author-info span {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .hamburger {
+    display: flex;
+    margin-right: 5px;
+    transform: scale(0.9); /* opcional: deixa ele menorzinho */
+  }
+
+  .nav-logo .logo,
+  .nav-logo .logo-text {
+    max-height: 40px; /* reduz logos para caber junto */
   }
 }
