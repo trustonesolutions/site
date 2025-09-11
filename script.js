@@ -104,6 +104,41 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
+  // ===== TESTIMONIALS: scroll-dots =====
+  const dotsContainer = document.querySelector(".scroll-dots");
+  if (testimonialsGrid && dotsContainer) {
+    const cards = testimonialsGrid.querySelectorAll(".testimonial-card");
+
+    // Cria as bolinhas automaticamente
+    cards.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (index === 0) dot.classList.add("active"); // primeira ativa
+      dotsContainer.appendChild(dot);
+
+      // clique na bolinha -> scroll até o card
+      dot.addEventListener("click", () => {
+        testimonialsGrid.scrollTo({
+          left: cards[index].offsetLeft,
+          behavior: "smooth",
+        });
+      });
+    });
+
+    const dots = dotsContainer.querySelectorAll(".dot");
+
+    // Atualiza bolinha ativa conforme o scroll
+    testimonialsGrid.addEventListener("scroll", () => {
+      let scrollLeft = testimonialsGrid.scrollLeft;
+      let cardWidth = cards[0].offsetWidth + 20; // 20px = gap aproximado
+      let index = Math.round(scrollLeft / cardWidth);
+
+      dots.forEach((dot, i) =>
+        dot.classList.toggle("active", i === index)
+      );
+    });
+  }
+
   // ===== RESULTS COUNTER ANIMATION (Desktop + Mobile) =====
   const resultsSection = document.querySelector(".results-section");
   if (resultsSection) {

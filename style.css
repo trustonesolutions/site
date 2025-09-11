@@ -694,16 +694,44 @@ section:nth-of-type(even) {
 .testimonials-section {
   background-color: var(--bg-primary);
 }
+/* Esconde a barra nativa */
 .testimonials-grid {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* permite scroll horizontal */
-  overflow-y: hidden; /* esconde scroll vertical */
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   padding: 20px;
   scroll-padding: 20px;
-  -webkit-overflow-scrolling: touch; /* mobile mais suave */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
+
+.testimonials-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Container das bolinhas */
+.scroll-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.scroll-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #777;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.scroll-dots .dot.active {
+  background: var(--accent-color);
+}
+
 
 .testimonial-card {
   flex: 0 0 calc(33.333% - 20px);
