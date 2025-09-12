@@ -1592,6 +1592,12 @@ section:nth-of-type(even) {
   padding-top: 20px;
   color: var(--footer-link);
 }
+.footer-contact i {
+  margin-right: 8px; /* espaçamento entre ícone e texto */
+  color: #6610f2; /* cor do ícone */
+  font-size: 20px;
+  
+}
 
 /* Cookie Banner */
 .cookie-banner {
