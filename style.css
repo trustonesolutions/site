@@ -1092,6 +1092,19 @@ section:nth-of-type(even) {
 }
 
 /* Específicos */
+.result-card.results h4 {
+  color: #28a745; /* verde */
+}
+.result-card.results ul li i {
+  color: #28a745;
+}
+
+.result-card.benefits h4 {
+  color: #28a745; /* verde */
+}
+.result-card.benefits ul li i {
+  color: #28a745;
+}
 .result-card.advantages h4 {
   color: #28a745; /* verde */
 }
