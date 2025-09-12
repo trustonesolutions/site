@@ -70,6 +70,7 @@ a {
   transition: color 0.3s ease;
 }
 
+
 a:hover {
   color: var(--accent-dark);
 }
@@ -1206,7 +1207,7 @@ section:nth-of-type(even) {
   flex-wrap: wrap;
 }
 
-.social-link {
+.contact-social .social-link {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1214,12 +1215,14 @@ section:nth-of-type(even) {
   padding: 10px 15px;
   border-radius: 25px;
   color: var(--text-primary);
+  text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.social-link:hover {
-  background-color: var(--accent-color);
-  color: #fff;
+.contact-social .social-link img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
 }
 
 .social-link i {
@@ -1609,7 +1612,6 @@ section:nth-of-type(even) {
   margin-right: 8px; /* espaçamento entre ícone e texto */
   color: #6610f2; /* cor do ícone */
   font-size: 20px;
-  
 }
 
 /* Cookie Banner */
