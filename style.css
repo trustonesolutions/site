@@ -1020,6 +1020,12 @@ section:nth-of-type(even) {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+.partner-logo {
+  width: 60px;   /* ajuste conforme o padrão da sua grade */
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
 
 .cert-item {
   background-color: var(--bg-primary);
@@ -1431,6 +1437,7 @@ section:nth-of-type(even) {
   margin-top: 10px;
 }
 
+
 /* Policy Pages Specific Styles */
 .policy-section {
   padding-top: 120px;
@@ -1680,6 +1687,23 @@ section:nth-of-type(even) {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
   margin-top: 3rem;
+}
+
+.photo-frame {
+  width: 150px;       /* ajuste o tamanho que quiser */
+  height: 150px;
+  border-radius: 50%; /* deixa redondo, se quiser */
+  overflow: hidden;   /* corta qualquer coisa que sair do frame */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary); /* cor de fundo caso a imagem não carregue */
+}
+
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre todo o espaço sem deformar */
 }
 
 .founder-card {
