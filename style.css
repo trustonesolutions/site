@@ -70,7 +70,6 @@ a {
   transition: color 0.3s ease;
 }
 
-
 a:hover {
   color: var(--accent-dark);
 }
@@ -1021,7 +1020,7 @@ section:nth-of-type(even) {
   gap: 30px;
 }
 .partner-logo {
-  width: 60px;   /* ajuste conforme o padrão da sua grade */
+  width: 60px; /* ajuste conforme o padrão da sua grade */
   height: auto;
   display: block;
   margin: 0 auto 1rem auto;
@@ -1437,7 +1436,6 @@ section:nth-of-type(even) {
   margin-top: 10px;
 }
 
-
 /* Policy Pages Specific Styles */
 .policy-section {
   padding-top: 120px;
@@ -1690,10 +1688,10 @@ section:nth-of-type(even) {
 }
 
 .photo-frame {
-  width: 150px;       /* ajuste o tamanho que quiser */
+  width: 150px; /* ajuste o tamanho que quiser */
   height: 150px;
   border-radius: 50%; /* deixa redondo, se quiser */
-  overflow: hidden;   /* corta qualquer coisa que sair do frame */
+  overflow: hidden; /* corta qualquer coisa que sair do frame */
   display: flex;
   align-items: center;
   justify-content: center;

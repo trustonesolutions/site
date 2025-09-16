@@ -129,13 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Atualiza bolinha ativa conforme o scroll
     testimonialsGrid.addEventListener("scroll", () => {
-      let scrollLeft = testimonialsGrid.scrollLeft;
-      let cardWidth = cards[0].offsetWidth + 20; // 20px = gap aproximado
-      let index = Math.round(scrollLeft / cardWidth);
+      const maxScroll =
+        testimonialsGrid.scrollWidth - testimonialsGrid.clientWidth;
+      const scrollRatio = testimonialsGrid.scrollLeft / maxScroll;
+      const index = Math.round(scrollRatio * (cards.length - 1));
 
-      dots.forEach((dot, i) =>
-        dot.classList.toggle("active", i === index)
-      );
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
     });
   }
 
