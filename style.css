@@ -1,4 +1,6 @@
-/* Variáveis CSS para temas */
+/* -------------------------------------------------------------------------- */
+/* 1. VARIÁVEIS CSS PARA TEMAS */
+/* -------------------------------------------------------------------------- */
 
 :root {
     --bg-primary: #eae4f5;
@@ -50,7 +52,9 @@
 }
 
 
-/* Reset e Base */
+/* -------------------------------------------------------------------------- */
+/* 2. RESET E BASE (Inclui Regras Globais, Links, Listas e Container) */
+/* -------------------------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -90,6 +94,18 @@ ul {
     padding: 0 20px;
 }
 
+.highlight {
+    color: #1e90ff;
+    /* azul vivo */
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 3. BOTÕES (BTN) */
+/* -------------------------------------------------------------------------- */
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -122,15 +138,10 @@ ul {
     transform: translateY(-2px);
 }
 
-.highlight {
-    color: #1e90ff;
-    /* azul vivo */
-    font-weight: 800;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
 
-
-/* Header e Navegação */
+/* -------------------------------------------------------------------------- */
+/* 4. HEADER E NAVEGAÇÃO (NAVBAR) */
+/* -------------------------------------------------------------------------- */
 
 .header {
     background-color: var(--header-bg);
@@ -144,7 +155,7 @@ ul {
 }
 
 .navbar {
-    background-color: var(--header-bg);
+    /* background-color: var(--header-bg); - REMOVIDO: Redundante com .header */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     /* Safari */
@@ -191,7 +202,6 @@ ul {
 
 
 /* Menu: centralizado automaticamente */
-
 .nav-menu {
     display: flex;
     gap: 2rem;
@@ -238,7 +248,6 @@ ul {
 
 
 /* Versão padrão (desktop) */
-
 .nav-controls {
     display: flex;
     align-items: center;
@@ -246,8 +255,7 @@ ul {
 }
 
 
-/* Theme Switch */
-
+/* Theme Switch (Fixo) */
 .theme-switch {
     position: fixed;
     /* fixa na tela, não dentro do header */
@@ -350,7 +358,9 @@ input:checked+.theme-slider:before {
 }
 
 
-/* Main Content Sections */
+/* -------------------------------------------------------------------------- */
+/* 5. SEÇÕES GERAIS E LAYOUT (MAIN, SECTION) */
+/* -------------------------------------------------------------------------- */
 
 main {
     padding-top: 80px;
@@ -364,8 +374,7 @@ section {
 }
 
 
-/* Exemplo: seções específicas */
-
+/* Exemplo: seções específicas (Regras de Força) */
 .services-section,
 .mvv-section,
 .team-section,
@@ -380,7 +389,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Hero Section */
+/* -------------------------------------------------------------------------- */
+/* 6. HERO SECTION (Inclui regras de overlay e títulos) */
+/* -------------------------------------------------------------------------- */
 
 .hero-section {
     background-image: url("assets/images/freepik1.jpg");
@@ -394,8 +405,10 @@ section:nth-of-type(even) {
     justify-content: center;
     min-height: 70vh;
     position: relative;
+    overflow: hidden;
 }
 
+/* Regras de Força para Hero Section (Imagens Específicas) */
 .page-sobre.hero-section {
     background-image: url("assets/images/team-meeting.jpg");
     background-size: cover;
@@ -425,12 +438,21 @@ section:nth-of-type(even) {
     position: relative;
 }
 
-.hero-section {
+.page-trusthub.hero-section {
+    background-image: url("assets/images/bannercel.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 260px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
     position: relative;
-    overflow: hidden;
-    /* evita o blur vazar */
 }
 
+/* Regras de Força para Overlay e Blur */
 .hero-section::before {
     content: "";
     position: absolute;
@@ -478,7 +500,7 @@ section:nth-of-type(even) {
     font-size: 1.2rem;
     margin: 0 auto 30px auto;
     /* centraliza horizontalmente e mantém margem inferior */
-    max-width: 700px;
+    max-width: 800px;
     opacity: 0.9;
     text-align: center;
     /* centraliza o texto */
@@ -521,12 +543,21 @@ section:nth-of-type(even) {
 }
 
 
-/* Services Section */
+/* -------------------------------------------------------------------------- */
+/* 7. SERVICES SECTION */
+/* -------------------------------------------------------------------------- */
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
+.services-grid.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+    gap: 25px;
+    margin-top: 40px;
+    justify-items: center; /* centraliza cada card */
 }
 
 .service-card {
@@ -580,6 +611,11 @@ section:nth-of-type(even) {
     color: var(--accent-color);
     margin-right: 10px;
 }
+
+
+/* -------------------------------------------------------------------------- */
+/* 8. RESULT ITEM (Card de Resultados/Contadores) */
+/* -------------------------------------------------------------------------- */
 
 .result-item {
     background-color: var(--bg-primary);
@@ -636,7 +672,6 @@ section:nth-of-type(even) {
 
 
 /* Animação de entrada */
-
 @keyframes countUp {
     from {
         transform: scale(0.8);
@@ -649,7 +684,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Differentials Section */
+/* -------------------------------------------------------------------------- */
+/* 9. DIFFERENTIALS SECTION */
+/* -------------------------------------------------------------------------- */
 
 .differentials-grid {
     display: grid;
@@ -689,7 +726,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Stats Section */
+/* -------------------------------------------------------------------------- */
+/* 10. STATS SECTION */
+/* -------------------------------------------------------------------------- */
 
 .stats-section {
     background-color: var(--accent-color);
@@ -716,7 +755,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Technologies Section */
+/* -------------------------------------------------------------------------- */
+/* 11. TECHNOLOGIES SECTION */
+/* -------------------------------------------------------------------------- */
 
 .technologies-section {
     background-color: var(--bg-secondary);
@@ -759,7 +800,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Testimonials Section */
+/* -------------------------------------------------------------------------- */
+/* 12. TESTIMONIALS SECTION */
+/* -------------------------------------------------------------------------- */
 
 .testimonials-section {
     background-color: var(--bg-secondary);
@@ -767,7 +810,6 @@ section:nth-of-type(even) {
 
 
 /* Esconde a barra nativa */
-
 .testimonials-grid {
     display: flex;
     gap: 20px;
@@ -793,7 +835,6 @@ section:nth-of-type(even) {
 
 
 /* Container das bolinhas */
-
 .scroll-dots {
     display: flex;
     justify-content: center;
@@ -858,7 +899,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Call to Action Section */
+/* -------------------------------------------------------------------------- */
+/* 13. CALL TO ACTION SECTION (CTA) */
+/* -------------------------------------------------------------------------- */
 
 .cta-section {
     background: var(--gradient-primary);
@@ -894,12 +937,11 @@ section:nth-of-type(even) {
 }
 
 
-/* About Page Specific Styles */
+/* -------------------------------------------------------------------------- */
+/* 14. ABOUT PAGE SPECIFIC STYLES (SOBRE NÓS) */
+/* -------------------------------------------------------------------------- */
 
-.page-sobre .hero-section {
-    background-image: url("assets/images/team-meeting.jpg");
-    /* Imagem específica para Sobre Nós */
-}
+/* Regra de Força: Imagem do Hero Section já está no bloco 6 */
 
 .hero-content-about {
     position: relative;
@@ -1143,7 +1185,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Results Section */
+/* -------------------------------------------------------------------------- */
+/* 15. RESULTS SECTION (Cards de Resultados Detalhados) */
+/* -------------------------------------------------------------------------- */
 
 .results-section {
     background-color: var(--bg-secondary);
@@ -1192,31 +1236,16 @@ section:nth-of-type(even) {
 }
 
 
-/* Específicos */
-
-.result-card.results h4 {
-    color: #28a745;
-    /* verde */
-}
-
-.result-card.results ul li i {
-    color: #28a745;
-}
-
-.result-card.benefits h4 {
-    color: #28a745;
-    /* verde */
-}
-
-.result-card.benefits ul li i {
-    color: #28a745;
-}
-
+/* Específicos (Regras de Força para Cores) */
+.result-card.results h4,
+.result-card.benefits h4,
 .result-card.advantages h4 {
     color: #28a745;
     /* verde */
 }
 
+.result-card.results ul li i,
+.result-card.benefits ul li i,
 .result-card.advantages ul li i {
     color: #28a745;
 }
@@ -1231,12 +1260,11 @@ section:nth-of-type(even) {
 }
 
 
-/* Contact Page Specific Styles */
+/* -------------------------------------------------------------------------- */
+/* 16. CONTACT PAGE SPECIFIC STYLES (CONTATO) */
+/* -------------------------------------------------------------------------- */
 
-.page-contato .hero-section {
-    background-image: url("assets/images/tech-solutions.jpeg");
-    /* Imagem específica para Contato */
-}
+/* Regra de Força: Imagem do Hero Section já está no bloco 6 */
 
 .hero-content-contact {
     position: relative;
@@ -1552,7 +1580,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Policy Pages Specific Styles */
+/* -------------------------------------------------------------------------- */
+/* 17. POLICY PAGES SPECIFIC STYLES */
+/* -------------------------------------------------------------------------- */
 
 .policy-section {
     padding-top: 120px;
@@ -1656,7 +1686,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Footer */
+/* -------------------------------------------------------------------------- */
+/* 18. FOOTER */
+/* -------------------------------------------------------------------------- */
 
 .footer {
     background-color: var(--footer-bg);
@@ -1743,7 +1775,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Cookie Banner */
+/* -------------------------------------------------------------------------- */
+/* 19. COOKIE BANNER */
+/* -------------------------------------------------------------------------- */
 
 .cookie-banner {
     position: fixed;
@@ -1800,7 +1834,9 @@ section:nth-of-type(even) {
 }
 
 
-/* Seção Fundadores */
+/* -------------------------------------------------------------------------- */
+/* 20. SEÇÃO FUNDADORES */
+/* -------------------------------------------------------------------------- */
 
 .founders-section {
     padding: 80px 0;
@@ -1814,19 +1850,20 @@ section:nth-of-type(even) {
     margin-top: 3rem;
 }
 
+/* Regras de Força para Photo Frame (Duplicatas Removidas) */
 .photo-frame {
-    width: 150px;
-    /* ajuste o tamanho que quiser */
-    height: 150px;
-    border-radius: 50%;
-    /* deixa redondo, se quiser */
-    overflow: hidden;
-    /* corta qualquer coisa que sair do frame */
+    width: 180px;
+    height: 220px;
+    border: 3px solid var(--accent-color);
+    border-radius: 12px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--bg-secondary);
-    /* cor de fundo caso a imagem não carregue */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .founder-photo {
@@ -1855,21 +1892,6 @@ section:nth-of-type(even) {
 
 .founder-photo-placeholder {
     margin-bottom: 1.5rem;
-}
-
-.photo-frame {
-    width: 180px;
-    height: 220px;
-    border: 3px solid var(--accent-color);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-secondary);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
 }
 
 .photo-frame:hover {
@@ -1910,9 +1932,20 @@ section:nth-of-type(even) {
     line-height: 1.6;
     font-size: 1rem;
 }
-
-
-/* Seção Jornada */
+/* -------------------------------------------------------------------------- */
+/* 21. TRUSTHUB*/
+/* -------------------------------------------------------------------------- */
+.th-demo-img {
+    width: 100%;
+    max-width: 1500px;
+    display: block;
+    margin: 40px auto 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+/* -------------------------------------------------------------------------- */
+/* 21. SEÇÃO JORNADA */
+/* -------------------------------------------------------------------------- */
 
 .journey-section {
     padding: 80px 0;
@@ -1968,10 +2001,9 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Nossa Missão ===== */
-
-
-/* ===== Nossa Missão (Card Único) ===== */
+/* -------------------------------------------------------------------------- */
+/* 22. SEÇÃO NOSSA MISSÃO */
+/* -------------------------------------------------------------------------- */
 
 .mission-section {
     padding: 80px 20px;
@@ -2014,7 +2046,9 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Seção Mapeamento de Desafios ===== */
+/* -------------------------------------------------------------------------- */
+/* 23. SEÇÃO MAPEAMENTO DE DESAFIOS */
+/* -------------------------------------------------------------------------- */
 
 .challenges-section {
     background-color: var(--bg-section);
@@ -2052,7 +2086,6 @@ section:nth-of-type(even) {
 
 
 /* Grid geral dos desafios */
-
 .challenges-comparison {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2062,7 +2095,6 @@ section:nth-of-type(even) {
 
 
 /* Cada coluna como card (igual "Nossos Serviços") */
-
 .challenge-column {
     background-color: var(--bg-primary);
     border-radius: 10px;
@@ -2121,7 +2153,6 @@ section:nth-of-type(even) {
 
 
 /* VS Divider */
-
 .vs-divider {
     display: flex;
     align-items: center;
@@ -2134,7 +2165,6 @@ section:nth-of-type(even) {
 
 
 /* Focus Quote */
-
 .focus-quote {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -2153,22 +2183,18 @@ section:nth-of-type(even) {
 }
 
 
-/* Switch no menu (mobile) */
+/* -------------------------------------------------------------------------- */
+/* 24. REGRAS DE FORÇA E RESPONSIVIDADE (MEDIA QUERIES) */
+/* -------------------------------------------------------------------------- */
 
+/* Switch no menu (mobile) - Regra de Força */
 .nav-menu .theme-switch {
     display: none;
     /* escondido por padrão */
 }
 
 
-/* ==================== */
-
-
-/* Ajuste Navbar Tema Light */
-
-
-/* ==================== */
-
+/* Ajuste Navbar Tema Light - Regra de Força */
 [data-theme="light"] .navbar {
     background: linear-gradient( 90deg, rgba(0, 123, 255, 0.7) 0%, /* azul */
     rgba(102, 16, 242, 0.7) 50%, /* roxo */
@@ -2180,7 +2206,7 @@ section:nth-of-type(even) {
 }
 
 
-/* Responsividade */
+/* Responsividade (Ordem Original Preservada) */
 
 @media (max-width: 480px) {
     .result-item {
@@ -2191,8 +2217,6 @@ section:nth-of-type(even) {
     }
 }
 
-
-/* Responsividade */
 
 @media (max-width: 768px) {
     .nav-menu {
@@ -2287,10 +2311,22 @@ section:nth-of-type(even) {
         height: 600px;
     }
 }
-
+@media (max-width: 768px) {
+    .th-demo-img {
+        width: 100%;
+        max-width: 420px; /* impede de estourar a tela */
+        border-radius: 15px;
+    }
+}
+ /*Breakpoint para melhorar visual em celular imagem trusthub */
+@media (max-width: 480px) {
+    .th-demo-img {
+        max-width: 320px;
+        margin-top: 20px;
+    }
+}
 
 /* Responsividade para fundadores */
-
 @media (max-width: 768px) {
     .founders-grid {
         grid-template-columns: 1fr;
@@ -2313,8 +2349,7 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Responsividade ===== */
-
+/* Responsividade para desafios */
 @media (max-width: 1024px) {
     .challenges-comparison {
         flex-direction: column;
@@ -2326,8 +2361,7 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Tablets (até 992px) ===== */
-
+/* Tablets (até 992px) */
 @media (max-width: 992px) {
     .nav-container {
         padding-left: 5%;
@@ -2366,8 +2400,7 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Mobile (até 768px) ===== */
-
+/* Mobile (até 768px) */
 @media (max-width: 768px) {
     .nav-container {
         padding-left: 1rem;
@@ -2384,11 +2417,7 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Extra small (até 480px) ===== */
-
-
-/* Mobile: garante que os cards não cortem */
-
+/* Extra small (até 480px) */
 @media (max-width: 480px) {
     .challenges-comparison {
         display: flex;
@@ -2411,7 +2440,6 @@ section:nth-of-type(even) {
 
 
 /* Ajuste para cards de desafios no mobile */
-
 @media (max-width: 768px) {
     .challenges-comparison {
         grid-template-columns: 1fr;
@@ -2429,7 +2457,6 @@ section:nth-of-type(even) {
 
 
 /* Mobile: esconder switch fixo e mostrar dentro do menu */
-
 @media (max-width: 768px) {
     .nav-controls {
         display: none;
@@ -2446,8 +2473,7 @@ section:nth-of-type(even) {
 }
 
 
-/* ===== Ajustes Globais para Cards no Mobile ===== */
-
+/* Ajustes Globais para Cards no Mobile */
 @media (max-width: 480px) {
     .service-card,
     .differential-item,
@@ -2478,7 +2504,6 @@ section:nth-of-type(even) {
     .departments-grid,
     .certifications-grid,
     .team-grid,
-    .mvv-grid,
     .journey-grid,
     .founders-grid,
     .browser-links,
@@ -2502,7 +2527,6 @@ section:nth-of-type(even) {
 
 
 /* Tablet e Mobile */
-
 @media (max-width: 1024px) {
     .footer-logo {
         text-align: center;
@@ -2522,11 +2546,7 @@ section:nth-of-type(even) {
 }
 
 
-/* Breakpoint para telas menores */
-
-
 /* Ajuste footer desktop */
-
 @media (min-width: 1025px) {
     .footer-links {
         margin-left: 60px;
@@ -2536,7 +2556,6 @@ section:nth-of-type(even) {
 
 
 /* Mobile: 1 card por vez */
-
 @media (max-width: 768px) {
     .testimonials-grid {
         gap: 15px;
@@ -2573,8 +2592,30 @@ section:nth-of-type(even) {
         /* opcional: deixa ele menorzinho */
     }
     .nav-logo .logo,
-    .nav-logo .logo-text {
+    .nav-logo .nav-logo-text {
         max-height: 40px;
         /* reduz logos para caber junto */
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 25. NOVO: SELEÇÃO DE IDIOMA (Placeholder) */
+/* -------------------------------------------------------------------------- */
+/* ADICIOJNAR IDIOMA, INGLES, PT, E ESPANHOL */
+.language-selector {
+    /* Exemplo de estilo para o seletor */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.language-selector select {
+    /* Estilo do dropdown */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
