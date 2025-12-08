@@ -1962,19 +1962,21 @@ section:nth-of-type(even) {
 /* 21. TRUSTHUB*/
 /* -------------------------------------------------------------------------- */
 .th-demo-img {
-    width: 80%;
-    max-width: 800px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    height: auto;                 /* mantém proporção */
-    object-fit: contain;          /* evita distorção */
+    width: 80%;              /* ocupa 80% da largura do container */
+    max-width: 900px;        /* limite máximo no desktop */
+    display: block;          /* permite centralização */
+    margin: 40px auto;       /* centraliza horizontalmente e dá espaço acima */
+    border-radius: 20px;     /* bordas arredondadas */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* sombra suave */
+    height: auto;            /* mantém proporção */
+    object-fit: contain;     /* evita distorções */
 }
 
 /* MOBILE — evita ficar enorme ou esticada */
 @media (max-width: 768px) {
     .th-demo-img {
-        width: 50%;
-        max-width: 50px;          /* limite ideal para iPhone */
+        width:150%;
+        max-width: 250px;          /* limite ideal para iPhone */
         margin: 0 auto;
         display: block;
         object-fit: contain;       /* garante que não estique */
@@ -1982,7 +1984,7 @@ section:nth-of-type(even) {
 }
 .th-main-img {
     display: block;
-    max-width: 480px; /* tamanho ideal no desktop */
+    max-width: 400px; /* tamanho ideal no desktop */
     width: 100%; /* responsivo */
     height: auto;
     margin: 0 auto;
