@@ -565,6 +565,12 @@ section:nth-of-type(even) {
     justify-content: space-between;
     height: 100%;
 }
+/* MOBILE — 1 coluna */
+@media (max-width: 768px) {
+    .services-grid.process-steps {
+        grid-template-columns: 1fr !important; /* ← garante 1 coluna */
+    }
+}
 
 .service-card {
     background-color: var(--bg-primary);
@@ -1956,13 +1962,43 @@ section:nth-of-type(even) {
 /* 21. TRUSTHUB*/
 /* -------------------------------------------------------------------------- */
 .th-demo-img {
-    width: 100%;
-    max-width: 1500px;
-    display: block;
-    margin: 40px auto 0;
+    width: 80%;
+    max-width: 800px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    height: auto;                 /* mantém proporção */
+    object-fit: contain;          /* evita distorção */
 }
+
+/* MOBILE — evita ficar enorme ou esticada */
+@media (max-width: 768px) {
+    .th-demo-img {
+        width: 50%;
+        max-width: 50px;          /* limite ideal para iPhone */
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;       /* garante que não estique */
+    }
+}
+.th-main-img {
+    display: block;
+    max-width: 480px; /* tamanho ideal no desktop */
+    width: 100%; /* responsivo */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .th-main-img {
+        max-width: 320px; /* evita esticar/cortar */
+    }
+}
+
+
 /* -------------------------------------------------------------------------- */
 /* 21. SEÇÃO JORNADA */
 /* -------------------------------------------------------------------------- */
