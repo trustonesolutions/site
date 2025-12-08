@@ -554,10 +554,16 @@ section:nth-of-type(even) {
 }
 .services-grid.process-steps {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
-    gap: 25px;
-    margin-top: 40px;
-    justify-items: center; /* centraliza cada card */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.services-grid.process-steps .service-card {
+    display: flex !important; /* força o flex */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .service-card {
@@ -567,6 +573,7 @@ section:nth-of-type(even) {
     padding: 30px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .service-card:hover {
@@ -611,8 +618,21 @@ section:nth-of-type(even) {
     color: var(--accent-color);
     margin-right: 10px;
 }
+.th-service-features li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
 
-
+.th-service-features li::before {
+    content: none !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
 /* -------------------------------------------------------------------------- */
 /* 8. RESULT ITEM (Card de Resultados/Contadores) */
 /* -------------------------------------------------------------------------- */
