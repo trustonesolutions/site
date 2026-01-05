@@ -1961,46 +1961,55 @@ section:nth-of-type(even) {
 /* -------------------------------------------------------------------------- */
 /* 21. TRUSTHUB*/
 /* -------------------------------------------------------------------------- */
-.th-demo-img {
-    width: 80%;              /* ocupa 80% da largura do container */
-    max-width: 900px;        /* limite máximo no desktop */
-    display: block;          /* permite centralização */
-    margin: 40px auto;       /* centraliza horizontalmente e dá espaço acima */
-    border-radius: 20px;     /* bordas arredondadas */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* sombra suave */
-    height: auto;            /* mantém proporção */
-    object-fit: contain;     /* evita distorções */
+/* Estilos para o contêiner da grade */
+.app-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual no desktop */
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
 }
 
-/* MOBILE — evita ficar enorme ou esticada */
-@media (max-width: 768px) {
-    .th-demo-img {
-        width:150%;
-        max-width: 250px;          /* limite ideal para iPhone */
-        margin: 0 auto;
-        display: block;
-        object-fit: contain;       /* garante que não estique */
-    }
-}
-.th-main-img {
-    display: block;
-    max-width: 400px; /* tamanho ideal no desktop */
-    width: 100%; /* responsivo */
-    height: auto;
-    margin: 0 auto;
+/* Estilos para os itens dentro da grade (vídeo e imagem) */
+.app-showcase-item .th-main-video,
+.app-showcase-item .th-main-img {
+    width: 420px;       /* Largura fixa para desktop */
+    height: 750px;      /* Altura fixa para desktop */
+    object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    object-fit: contain;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    display: block;
 }
 
-/* MOBILE */
+.app-showcase-item .th-main-video {
+    background: #000;
+}
+
+/* === AJUSTES PARA MOBILE === */
 @media (max-width: 768px) {
-    .th-main-img {
-        max-width: 320px; /* evita esticar/cortar */
+    .app-showcase-grid {
+        grid-template-columns: 1fr; /* Uma única coluna no mobile */
+        gap: 30px; /* Espaçamento menor no mobile */
+    }
+
+    /* Ordena os itens no mobile */
+    .app-showcase-item.video {
+        order: 1; /* Vídeo aparece primeiro */
+    }
+
+    .app-showcase-item.image {
+        order: 2; /* Imagem aparece depois do vídeo */
+    }
+
+    /* Redimensiona o vídeo e a imagem para o mobile */
+    .app-showcase-item .th-main-video,
+    .app-showcase-item .th-main-img {
+        width: 100%;      /* Ocupa 100% da largura do contêiner */
+        max-width: 320px; /* Define uma largura máxima para não ficar grande demais */
+        height: auto;     /* A altura se ajusta automaticamente para manter a proporção */
+        margin: 0 auto;   /* Centraliza o item caso o contêiner seja mais largo */
     }
 }
-
-
 /* -------------------------------------------------------------------------- */
 /* 21. SEÇÃO JORNADA */
 /* -------------------------------------------------------------------------- */
